@@ -1,0 +1,13 @@
+﻿<Properties StartupConfiguration="{77BEB280-F780-0CE5-9311-7A48512B87BA}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/CallNativeCode.cs">
+    <Files>
+      <File FileName="Assets/CallNativeCode.cs" Line="51" Column="35" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
