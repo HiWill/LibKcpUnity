@@ -9,25 +9,25 @@
 /* Begin PBXBuildFile section */
 		3C2880581F84CEFE000C7BE5 /* inversion_tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C2880461F84CEFD000C7BE5 /* inversion_tree.cpp */; };
 		3C2880591F84CEFE000C7BE5 /* sess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C2880481F84CEFD000C7BE5 /* sess.cpp */; };
-		3C28805A1F84CEFE000C7BE5 /* ikcp.c in Sources */ = {isa = PBXBuildFile; fileRef = 3C2880491F84CEFD000C7BE5 /* ikcp.c */; };
+		3C28805A1F84CEFE000C7BE5 /* ikcp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C2880491F84CEFD000C7BE5 /* ikcp.cpp */; };
 		3C28805B1F84CEFE000C7BE5 /* galois.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C28804C1F84CEFD000C7BE5 /* galois.cpp */; };
 		3C28805C1F84CEFE000C7BE5 /* reedsolomon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C28804D1F84CEFD000C7BE5 /* reedsolomon.cpp */; };
 		3C28805D1F84CEFE000C7BE5 /* galois_noasm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C2880501F84CEFD000C7BE5 /* galois_noasm.cpp */; };
-		3C28805E1F84CEFE000C7BE5 /* galois_table.c in Sources */ = {isa = PBXBuildFile; fileRef = 3C2880531F84CEFD000C7BE5 /* galois_table.c */; };
+		3C28805E1F84CEFE000C7BE5 /* galois_table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C2880531F84CEFD000C7BE5 /* galois_table.cpp */; };
 		3C28805F1F84CEFE000C7BE5 /* matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C2880551F84CEFE000C7BE5 /* matrix.cpp */; };
 		3C2880601F84CEFE000C7BE5 /* fec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C2880561F84CEFE000C7BE5 /* fec.cpp */; };
 		3C2880611F84CEFE000C7BE5 /* LibKcp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C2880571F84CEFE000C7BE5 /* LibKcp.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3C28803B1F84CEBF000C7BE5 /* KcpDemo.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = KcpDemo.bundle; path = "../../../../../../../../Downloads/New Unity Project/Assets/Plugins/OSX/KcpDemo.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C28803B1F84CEBF000C7BE5 /* libKcp.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = libKcp.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C28803E1F84CEBF000C7BE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C2880441F84CEFD000C7BE5 /* LibKcp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LibKcp.h; path = ../../../Assets/Plugins/iOS/LibKcp/LibKcp.h; sourceTree = "<group>"; };
 		3C2880451F84CEFD000C7BE5 /* matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = matrix.h; path = ../../../Assets/Plugins/iOS/LibKcp/matrix.h; sourceTree = "<group>"; };
 		3C2880461F84CEFD000C7BE5 /* inversion_tree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = inversion_tree.cpp; path = ../../../Assets/Plugins/iOS/LibKcp/inversion_tree.cpp; sourceTree = "<group>"; };
 		3C2880471F84CEFD000C7BE5 /* reedsolomon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = reedsolomon.h; path = ../../../Assets/Plugins/iOS/LibKcp/reedsolomon.h; sourceTree = "<group>"; };
 		3C2880481F84CEFD000C7BE5 /* sess.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sess.cpp; path = ../../../Assets/Plugins/iOS/LibKcp/sess.cpp; sourceTree = "<group>"; };
-		3C2880491F84CEFD000C7BE5 /* ikcp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ikcp.c; path = ../../../Assets/Plugins/iOS/LibKcp/ikcp.c; sourceTree = "<group>"; };
+		3C2880491F84CEFD000C7BE5 /* ikcp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ikcp.cpp; path = ../../../Assets/Plugins/iOS/LibKcp/ikcp.cpp; sourceTree = "<group>"; };
 		3C28804A1F84CEFD000C7BE5 /* ikcp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ikcp.h; path = ../../../Assets/Plugins/iOS/LibKcp/ikcp.h; sourceTree = "<group>"; };
 		3C28804B1F84CEFD000C7BE5 /* galois_noasm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = galois_noasm.h; path = ../../../Assets/Plugins/iOS/LibKcp/galois_noasm.h; sourceTree = "<group>"; };
 		3C28804C1F84CEFD000C7BE5 /* galois.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = galois.cpp; path = ../../../Assets/Plugins/iOS/LibKcp/galois.cpp; sourceTree = "<group>"; };
@@ -37,7 +37,7 @@
 		3C2880501F84CEFD000C7BE5 /* galois_noasm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = galois_noasm.cpp; path = ../../../Assets/Plugins/iOS/LibKcp/galois_noasm.cpp; sourceTree = "<group>"; };
 		3C2880511F84CEFD000C7BE5 /* galois.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = galois.h; path = ../../../Assets/Plugins/iOS/LibKcp/galois.h; sourceTree = "<group>"; };
 		3C2880521F84CEFD000C7BE5 /* inversion_tree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inversion_tree.h; path = ../../../Assets/Plugins/iOS/LibKcp/inversion_tree.h; sourceTree = "<group>"; };
-		3C2880531F84CEFD000C7BE5 /* galois_table.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = galois_table.c; path = ../../../Assets/Plugins/iOS/LibKcp/galois_table.c; sourceTree = "<group>"; };
+		3C2880531F84CEFD000C7BE5 /* galois_table.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = galois_table.cpp; path = ../../../Assets/Plugins/iOS/LibKcp/galois_table.cpp; sourceTree = "<group>"; };
 		3C2880541F84CEFE000C7BE5 /* fec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fec.h; path = ../../../Assets/Plugins/iOS/LibKcp/fec.h; sourceTree = "<group>"; };
 		3C2880551F84CEFE000C7BE5 /* matrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = matrix.cpp; path = ../../../Assets/Plugins/iOS/LibKcp/matrix.cpp; sourceTree = "<group>"; };
 		3C2880561F84CEFE000C7BE5 /* fec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = fec.cpp; path = ../../../Assets/Plugins/iOS/LibKcp/fec.cpp; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 		3C28803C1F84CEBF000C7BE5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3C28803B1F84CEBF000C7BE5 /* KcpDemo.bundle */,
+				3C28803B1F84CEBF000C7BE5 /* libKcp.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,10 +79,10 @@
 				3C2880541F84CEFE000C7BE5 /* fec.h */,
 				3C2880501F84CEFD000C7BE5 /* galois_noasm.cpp */,
 				3C28804B1F84CEFD000C7BE5 /* galois_noasm.h */,
-				3C2880531F84CEFD000C7BE5 /* galois_table.c */,
+				3C2880531F84CEFD000C7BE5 /* galois_table.cpp */,
 				3C28804C1F84CEFD000C7BE5 /* galois.cpp */,
 				3C2880511F84CEFD000C7BE5 /* galois.h */,
-				3C2880491F84CEFD000C7BE5 /* ikcp.c */,
+				3C2880491F84CEFD000C7BE5 /* ikcp.cpp */,
 				3C28804A1F84CEFD000C7BE5 /* ikcp.h */,
 				3C2880461F84CEFD000C7BE5 /* inversion_tree.cpp */,
 				3C2880521F84CEFD000C7BE5 /* inversion_tree.h */,
@@ -102,9 +102,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3C28803A1F84CEBF000C7BE5 /* KcpOSX */ = {
+		3C28803A1F84CEBF000C7BE5 /* libKcp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3C2880411F84CEBF000C7BE5 /* Build configuration list for PBXNativeTarget "KcpOSX" */;
+			buildConfigurationList = 3C2880411F84CEBF000C7BE5 /* Build configuration list for PBXNativeTarget "libKcp" */;
 			buildPhases = (
 				3C2880371F84CEBF000C7BE5 /* Sources */,
 				3C2880381F84CEBF000C7BE5 /* Frameworks */,
@@ -114,9 +114,9 @@
 			);
 			dependencies = (
 			);
-			name = KcpOSX;
+			name = libKcp;
 			productName = KcpOSX;
-			productReference = 3C28803B1F84CEBF000C7BE5 /* KcpDemo.bundle */;
+			productReference = 3C28803B1F84CEBF000C7BE5 /* libKcp.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -134,7 +134,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3C2880361F84CEBF000C7BE5 /* Build configuration list for PBXProject "KcpOSX" */;
+			buildConfigurationList = 3C2880361F84CEBF000C7BE5 /* Build configuration list for PBXProject "libKcp" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -146,7 +146,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3C28803A1F84CEBF000C7BE5 /* KcpOSX */,
+				3C28803A1F84CEBF000C7BE5 /* libKcp */,
 			);
 		};
 /* End PBXProject section */
@@ -169,10 +169,10 @@
 				3C2880601F84CEFE000C7BE5 /* fec.cpp in Sources */,
 				3C28805F1F84CEFE000C7BE5 /* matrix.cpp in Sources */,
 				3C2880581F84CEFE000C7BE5 /* inversion_tree.cpp in Sources */,
-				3C28805E1F84CEFE000C7BE5 /* galois_table.c in Sources */,
+				3C28805E1F84CEFE000C7BE5 /* galois_table.cpp in Sources */,
 				3C2880611F84CEFE000C7BE5 /* LibKcp.cpp in Sources */,
 				3C28805D1F84CEFE000C7BE5 /* galois_noasm.cpp in Sources */,
-				3C28805A1F84CEFE000C7BE5 /* ikcp.c in Sources */,
+				3C28805A1F84CEFE000C7BE5 /* ikcp.cpp in Sources */,
 				3C28805B1F84CEFE000C7BE5 /* galois.cpp in Sources */,
 				3C28805C1F84CEFE000C7BE5 /* reedsolomon.cpp in Sources */,
 				3C2880591F84CEFE000C7BE5 /* sess.cpp in Sources */,
@@ -288,6 +288,7 @@
 		3C2880421F84CEBF000C7BE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = KcpOSX/Info.plist;
@@ -302,6 +303,7 @@
 		3C2880431F84CEBF000C7BE5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = KcpOSX/Info.plist;
@@ -316,7 +318,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3C2880361F84CEBF000C7BE5 /* Build configuration list for PBXProject "KcpOSX" */ = {
+		3C2880361F84CEBF000C7BE5 /* Build configuration list for PBXProject "libKcp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3C28803F1F84CEBF000C7BE5 /* Debug */,
@@ -325,7 +327,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3C2880411F84CEBF000C7BE5 /* Build configuration list for PBXNativeTarget "KcpOSX" */ = {
+		3C2880411F84CEBF000C7BE5 /* Build configuration list for PBXNativeTarget "libKcp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3C2880421F84CEBF000C7BE5 /* Debug */,

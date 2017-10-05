@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		3C2880281F84CE2A000C7BE5 /* inversion_tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C2880161F84CE29000C7BE5 /* inversion_tree.cpp */; };
 		3C2880291F84CE2A000C7BE5 /* sess.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C2880181F84CE29000C7BE5 /* sess.cpp */; };
-		3C28802A1F84CE2A000C7BE5 /* ikcp.c in Sources */ = {isa = PBXBuildFile; fileRef = 3C2880191F84CE29000C7BE5 /* ikcp.c */; };
+		3C28802A1F84CE2A000C7BE5 /* ikcp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C2880191F84CE29000C7BE5 /* ikcp.cpp */; };
 		3C28802B1F84CE2A000C7BE5 /* galois.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C28801C1F84CE29000C7BE5 /* galois.cpp */; };
 		3C28802C1F84CE2A000C7BE5 /* reedsolomon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C28801D1F84CE29000C7BE5 /* reedsolomon.cpp */; };
 		3C28802D1F84CE2A000C7BE5 /* galois_noasm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C2880201F84CE29000C7BE5 /* galois_noasm.cpp */; };
-		3C28802E1F84CE2A000C7BE5 /* galois_table.c in Sources */ = {isa = PBXBuildFile; fileRef = 3C2880231F84CE2A000C7BE5 /* galois_table.c */; };
+		3C28802E1F84CE2A000C7BE5 /* galois_table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C2880231F84CE2A000C7BE5 /* galois_table.cpp */; };
 		3C28802F1F84CE2A000C7BE5 /* matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C2880251F84CE2A000C7BE5 /* matrix.cpp */; };
 		3C2880301F84CE2A000C7BE5 /* fec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C2880261F84CE2A000C7BE5 /* fec.cpp */; };
 		3C2880311F84CE2A000C7BE5 /* LibKcp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C2880271F84CE2A000C7BE5 /* LibKcp.cpp */; };
@@ -38,7 +38,7 @@
 		3C2880161F84CE29000C7BE5 /* inversion_tree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = inversion_tree.cpp; path = ../../../Assets/Plugins/iOS/LibKcp/inversion_tree.cpp; sourceTree = "<group>"; };
 		3C2880171F84CE29000C7BE5 /* reedsolomon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = reedsolomon.h; path = ../../../Assets/Plugins/iOS/LibKcp/reedsolomon.h; sourceTree = "<group>"; };
 		3C2880181F84CE29000C7BE5 /* sess.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sess.cpp; path = ../../../Assets/Plugins/iOS/LibKcp/sess.cpp; sourceTree = "<group>"; };
-		3C2880191F84CE29000C7BE5 /* ikcp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ikcp.c; path = ../../../Assets/Plugins/iOS/LibKcp/ikcp.c; sourceTree = "<group>"; };
+		3C2880191F84CE29000C7BE5 /* ikcp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ikcp.cpp; path = ../../../Assets/Plugins/iOS/LibKcp/ikcp.cpp; sourceTree = "<group>"; };
 		3C28801A1F84CE29000C7BE5 /* ikcp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ikcp.h; path = ../../../Assets/Plugins/iOS/LibKcp/ikcp.h; sourceTree = "<group>"; };
 		3C28801B1F84CE29000C7BE5 /* galois_noasm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = galois_noasm.h; path = ../../../Assets/Plugins/iOS/LibKcp/galois_noasm.h; sourceTree = "<group>"; };
 		3C28801C1F84CE29000C7BE5 /* galois.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = galois.cpp; path = ../../../Assets/Plugins/iOS/LibKcp/galois.cpp; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		3C2880201F84CE29000C7BE5 /* galois_noasm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = galois_noasm.cpp; path = ../../../Assets/Plugins/iOS/LibKcp/galois_noasm.cpp; sourceTree = "<group>"; };
 		3C2880211F84CE29000C7BE5 /* galois.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = galois.h; path = ../../../Assets/Plugins/iOS/LibKcp/galois.h; sourceTree = "<group>"; };
 		3C2880221F84CE2A000C7BE5 /* inversion_tree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inversion_tree.h; path = ../../../Assets/Plugins/iOS/LibKcp/inversion_tree.h; sourceTree = "<group>"; };
-		3C2880231F84CE2A000C7BE5 /* galois_table.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = galois_table.c; path = ../../../Assets/Plugins/iOS/LibKcp/galois_table.c; sourceTree = "<group>"; };
+		3C2880231F84CE2A000C7BE5 /* galois_table.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = galois_table.cpp; path = ../../../Assets/Plugins/iOS/LibKcp/galois_table.cpp; sourceTree = "<group>"; };
 		3C2880241F84CE2A000C7BE5 /* fec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fec.h; path = ../../../Assets/Plugins/iOS/LibKcp/fec.h; sourceTree = "<group>"; };
 		3C2880251F84CE2A000C7BE5 /* matrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = matrix.cpp; path = ../../../Assets/Plugins/iOS/LibKcp/matrix.cpp; sourceTree = "<group>"; };
 		3C2880261F84CE2A000C7BE5 /* fec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = fec.cpp; path = ../../../Assets/Plugins/iOS/LibKcp/fec.cpp; sourceTree = "<group>"; };
@@ -90,10 +90,10 @@
 				3C2880241F84CE2A000C7BE5 /* fec.h */,
 				3C2880201F84CE29000C7BE5 /* galois_noasm.cpp */,
 				3C28801B1F84CE29000C7BE5 /* galois_noasm.h */,
-				3C2880231F84CE2A000C7BE5 /* galois_table.c */,
+				3C2880231F84CE2A000C7BE5 /* galois_table.cpp */,
 				3C28801C1F84CE29000C7BE5 /* galois.cpp */,
 				3C2880211F84CE29000C7BE5 /* galois.h */,
-				3C2880191F84CE29000C7BE5 /* ikcp.c */,
+				3C2880191F84CE29000C7BE5 /* ikcp.cpp */,
 				3C28801A1F84CE29000C7BE5 /* ikcp.h */,
 				3C2880161F84CE29000C7BE5 /* inversion_tree.cpp */,
 				3C2880221F84CE2A000C7BE5 /* inversion_tree.h */,
@@ -169,10 +169,10 @@
 				3C2880301F84CE2A000C7BE5 /* fec.cpp in Sources */,
 				3C28802F1F84CE2A000C7BE5 /* matrix.cpp in Sources */,
 				3C2880281F84CE2A000C7BE5 /* inversion_tree.cpp in Sources */,
-				3C28802E1F84CE2A000C7BE5 /* galois_table.c in Sources */,
+				3C28802E1F84CE2A000C7BE5 /* galois_table.cpp in Sources */,
 				3C2880311F84CE2A000C7BE5 /* LibKcp.cpp in Sources */,
 				3C28802D1F84CE2A000C7BE5 /* galois_noasm.cpp in Sources */,
-				3C28802A1F84CE2A000C7BE5 /* ikcp.c in Sources */,
+				3C28802A1F84CE2A000C7BE5 /* ikcp.cpp in Sources */,
 				3C28802B1F84CE2A000C7BE5 /* galois.cpp in Sources */,
 				3C28802C1F84CE2A000C7BE5 /* reedsolomon.cpp in Sources */,
 				3C2880291F84CE2A000C7BE5 /* sess.cpp in Sources */,

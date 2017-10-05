@@ -5,21 +5,7 @@ using System.Runtime.InteropServices;
 using System;
 
 public class CallNativeCode : MonoBehaviour
-{
-
-#if UNITY_EDITOR && UNITY_EDITOR_OSX
-    [DllImport("KcpOSX")]
-    private static extern bool _InitKcp(string ip,short port);
-
-	[DllImport("KcpOSX")]
-	private unsafe static extern void _SendData(ref byte buff, int size);
-
-	[DllImport("KcpOSX")]
-	private unsafe static extern int _ReceiveData(ref byte buff, int size);
-
-	[DllImport("KcpOSX")]
-	private static extern int _Destroy();
-#endif
+{ 
 
 #if !UNITY_EDITOR && UNITY_IOS
 	[DllImport("__Internal")]
@@ -34,11 +20,23 @@ public class CallNativeCode : MonoBehaviour
     [DllImport("__Internal")]
     private static extern int _Destroy();
 
+#else
+	[DllImport("libKcp")]
+	private static extern bool _InitKcp(string ip, short port);
+
+	[DllImport("libKcp")]
+	private unsafe static extern void _SendData(ref byte buff, int size);
+
+	[DllImport("libKcp")]
+	private unsafe static extern int _ReceiveData(ref byte buff, int size);
+
+	[DllImport("libKcp")]
+	private static extern int _Destroy();
 #endif
 
 
 
-	byte[] buffer = new byte[1024];
+    byte[] buffer = new byte[1024];
 
     public UnityEngine.UI.Text debugLabel;
 

@@ -2,7 +2,13 @@
 #include "encoding.h"
 #include <iostream>
 #include <sys/socket.h>
-#include <sys/fcntl.h>
+
+#ifdef __ANDROID__
+    #include <fcntl.h>
+#else
+    #include <sys/fcntl.h>
+#endif
+
 #include <arpa/inet.h>
 #include <unistd.h>
 #include <cstring>
