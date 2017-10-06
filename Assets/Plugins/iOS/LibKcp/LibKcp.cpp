@@ -25,9 +25,7 @@ extern "C"
     {
         struct timeval time;
         gettimeofday(&time, NULL);
-
-        unsigned int randomSeed=(unsigned int)(time.tv_sec * 1000) + (time.tv_usec / 1000);
-        srand(randomSeed); 
+        srand((time.tv_sec * 1000) + (time.tv_usec / 1000));
 
         session = UDPSession::DialWithOptions(ip, port, dataShards,parityShards);
         session->NoDelay(1, 20, 2, 1);
