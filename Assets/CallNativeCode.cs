@@ -5,34 +5,44 @@ using System.Runtime.InteropServices;
 using System;
 
 public class CallNativeCode : MonoBehaviour
-{ 
+{
 
 #if !UNITY_EDITOR && UNITY_IOS
 	[DllImport("__Internal")]
-	private static extern bool _InitKcp();
-
-    [DllImport("__Internal")]
-    private unsafe static extern void _SendData(ref byte buff,int size);
-
-    [DllImport("__Internal")]
-    private unsafe static extern int _ReceiveData(ref byte buff, int size);
-
-    [DllImport("__Internal")]
-    private static extern int _Destroy();
-
 #else
 	[DllImport("libKcp")]
-	private static extern bool _InitKcp(string ip, short port);
+#endif
+	private static extern bool _InitKcp(string ip, short port,int mtu, int wndSize , int dataShards, int parityShards,bool useStreamMode);
 
+#if !UNITY_EDITOR && UNITY_IOS
+    [DllImport("__Internal")]
+#else
 	[DllImport("libKcp")]
+#endif
 	private unsafe static extern void _SendData(ref byte buff, int size);
 
+#if !UNITY_EDITOR && UNITY_IOS
+    [DllImport("__Internal")]
+#else
 	[DllImport("libKcp")]
+#endif
 	private unsafe static extern int _ReceiveData(ref byte buff, int size);
 
+#if !UNITY_EDITOR && UNITY_IOS
+    [DllImport("__Internal")]
+#else
 	[DllImport("libKcp")]
-	private static extern int _Destroy();
 #endif
+	private static extern void _Update();
+
+#if !UNITY_EDITOR && UNITY_IOS
+    [DllImport("__Internal")]
+#else
+	[DllImport("libKcp")]
+#endif
+	private static extern void _Destroy(); 
+	
+
 
 
 
@@ -46,7 +56,7 @@ public class CallNativeCode : MonoBehaviour
     private void Awake()
     {
         debugLabel.text = "Awake\n";
-        if(_InitKcp("35.187.211.201",5050))
+        if(_InitKcp("127.0.0.1", 5050, 1400, 128, 0, 0, false))
         {
             StartCoroutine(SendTest());
             StartCoroutine(ReceiveTest());
@@ -59,6 +69,7 @@ public class CallNativeCode : MonoBehaviour
         {
 			Receive();
 			yield return null; 
+            _Update();
         } 
     }
 

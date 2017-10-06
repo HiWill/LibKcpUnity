@@ -18,7 +18,10 @@ UDPSession *session;
 
 extern "C"
 {
-    bool _InitKcp(const char *ip, uint16_t port)
+    bool _InitKcp(const char *ip, uint16_t port,
+                  int mtu,int wndSize,
+                  size_t dataShards, size_t parityShards,
+                  bool useStreamMode)
     {
         struct timeval time;
         gettimeofday(&time, NULL);
@@ -26,11 +29,11 @@ extern "C"
         unsigned int randomSeed=(unsigned int)(time.tv_sec * 1000) + (time.tv_usec / 1000);
         srand(randomSeed); 
 
-        session = UDPSession::DialWithOptions(ip, port, 2,2);
+        session = UDPSession::DialWithOptions(ip, port, dataShards,parityShards);
         session->NoDelay(1, 20, 2, 1);
-        session->WndSize(128, 128);
-        session->SetMtu(1400);
-        session->SetStreamMode(true);
+        session->WndSize(wndSize, wndSize);
+        session->SetMtu(mtu);
+        session->SetStreamMode(useStreamMode);
         session->SetDSCP(46);
 
         return (session != nullptr);
@@ -39,15 +42,18 @@ extern "C"
     void _SendData(char *buf,size_t sz)
     {
         session->Write(buf, sz);
-        session->Update(iClock());
     }
     
     ssize_t _ReceiveData(char *buf,size_t sz)
     {
         ssize_t n = 0;
         n = session->Read(buf, sz);
-        session->Update(iClock());
         return n;
+    }
+    
+    void _Update()
+    {
+        session->Update(iClock());
     }
     
     void _Destroy()
