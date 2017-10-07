@@ -15,6 +15,7 @@ private:
     size_t m_streambufsiz{0};
 
     FEC fec;
+    bool fecEnable{false};
     uint32_t pkt_idx{0};
     std::vector<row_type> shards;
     size_t dataShards{0};
