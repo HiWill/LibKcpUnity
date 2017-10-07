@@ -63,7 +63,7 @@ public class CallNativeCode : MonoBehaviour
         udpsocket.Connect(ip, (ushort)port);
         return true;
 #else
-        return _InitKcp(ip, port, 1400, 128, 2, 2, false);//disable fec by: _InitKcp(ip, port, 1400, 128, 0, 0, false);
+        return _InitKcp(ip, port, 1400, 128, 0, 0, false);//enable fec by: _InitKcp(ip, port, 1400, 128, 2, 2, false);
 #endif
 	}
 
