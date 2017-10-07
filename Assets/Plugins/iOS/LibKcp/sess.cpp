@@ -46,12 +46,13 @@ UDPSession::DialWithOptions(const char *ip, uint16_t port, size_t dataShards, si
     if (sess == nullptr) {
         return nullptr;
     }
-
+    sess->fecEnable=false;
     if (dataShards > 0 && parityShards > 0) {
         sess->fec = FEC::New(3 * (dataShards + parityShards), dataShards, parityShards);
         sess->shards.resize(dataShards + parityShards, nullptr);
         sess->dataShards = dataShards;
         sess->parityShards = parityShards;
+        sess->fecEnable=true;
     }
     return sess;
 };
@@ -103,7 +104,7 @@ UDPSession::Update(uint32_t current) noexcept {
     for (;;) {
         ssize_t n = recv(m_sockfd, m_buf, sizeof(m_buf), 0);
         if (n > 0) {
-            if (fec.isEnabled()) {
+            if (fecEnable) {
                 // decode FEC packet
                 auto pkt = fec.Decode(m_buf, static_cast<size_t>(n));
                 if (pkt.flag == typeData) {
@@ -212,9 +213,15 @@ UDPSession::SetStreamMode(bool enable) noexcept {
 int
 UDPSession::out_wrapper(const char *buf, int len, struct IKCPCB *, void *user) {
     assert(user != nullptr);
+    
     UDPSession *sess = static_cast<UDPSession *>(user);
 
-    if (sess->fec.isEnabled()) {    // append FEC header
+    if(sess->fecEnable==false)
+    {
+        sess->output(buf, static_cast<size_t>(len));
+    }
+    else
+    {   // append FEC header
         // extend to len + fecHeaderSizePlus2
         // i.e. 4B seqid + 2B flag + 2B size
         memcpy(sess->m_buf + fecHeaderSizePlus2, buf, static_cast<size_t>(len));
@@ -243,8 +250,6 @@ UDPSession::out_wrapper(const char *buf, int len, struct IKCPCB *, void *user) {
             // reset indexing
             sess->pkt_idx = 0;
         }
-    } else { // No FEC, just send raw bytes,
-        sess->output(buf, static_cast<size_t>(len));
     }
     return 0;
 }

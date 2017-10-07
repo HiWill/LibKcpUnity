@@ -49,7 +49,12 @@ public class CallNativeCode : MonoBehaviour
 
 	#region wrapper
 
-	KcpProject.v2.UdpSocket udpsocket;//for windows, native plugin only work on ios/osx/android
+	/// <summary>
+    /// The udpsocket: c# version of the kcp , work for windows, 
+    /// added this because native plugin only work on ios/osx/android
+    /// do not support fec
+	/// </summary>
+	KcpProject.v2.UdpSocket udpsocket;//
 
     public bool InitKcp(string ip, short port)
     {
@@ -58,9 +63,9 @@ public class CallNativeCode : MonoBehaviour
         udpsocket.Connect(ip, (ushort)port);
         return true;
 #else
-        return _InitKcp(ip, port, 1400, 128, 0, 0, false);
+        return _InitKcp(ip, port, 1400, 128, 2, 2, false);//disable fec by: _InitKcp(ip, port, 1400, 128, 0, 0, false);
 #endif
-    }
+	}
 
     public void SendData(byte[] ar)
     {
@@ -92,62 +97,59 @@ public class CallNativeCode : MonoBehaviour
 
 
 
-	byte[] buffer = new byte[2048];
+    byte[] receiveBuffer = new byte[2048];
 
     public UnityEngine.UI.Text debugLabel;
 
-    int index;
-    int rCount;
+    
+    int receiveCount; 
+    float elapseTime;
 
-    float t;
     private void Awake()
     {
         debugLabel.text = "Awake\n";
         if (InitKcp("127.0.0.1", 5050))
         {
-            StartCoroutine(SendTest());
-            StartCoroutine(ReceiveTest()); 
+            SendTest();
+            ReceiveTest(); 
 		}    
     } 
 
-    IEnumerator ReceiveTest()
-    {
-        yield return null;
-        while(rCount<10)
+    void ReceiveTest()
+    { 
+        while(receiveCount<1)
 		{
 			Receive();
 			UpdateKcp();
 		}
-		t = Time.realtimeSinceStartup - t;
-		print(t);
+		elapseTime = Time.realtimeSinceStartup - elapseTime;
+		print(elapseTime);
     }
 
-    IEnumerator SendTest()
+    void SendTest()
     {
-        yield return null;
-        while(index<10)
+		Send();
+		elapseTime = Time.realtimeSinceStartup;
+	}
+
+    void Receive()
+    {
+        int count=0;
+        do
         {
-			Send();
-			//UpdateKcp();
-            index++; 
-		}
-		t = Time.realtimeSinceStartup;
+			count=ReceiveData(receiveBuffer);
+			if (count > 0)
+			{
+				string result = System.Text.Encoding.Default.GetString(receiveBuffer, 0, count);
+				debugLabel.text += result + "\n";
+				receiveCount++;
+			}
+        } while (count>0); 
     }
 
-    unsafe void Receive()
+    void Send()
     {
-        int count=ReceiveData(buffer);
-        if(count>0)
-        {
-            string result= System.Text.Encoding.Default.GetString(buffer,0,count);
-            debugLabel.text += result + "\n";
-            rCount++;
-        }
-    }
-
-    unsafe void Send()
-    {
-        string str = "hello"+index;
+        string str = "hello";
         byte[] ar = System.Text.Encoding.UTF8.GetBytes(str);
         SendData(ar);
     } 
