@@ -98,16 +98,15 @@ namespace KcpProject.v2
             {
 				needSwitchRecvQueue = false;
 				mRecvQueue.Switch();
-            }
+				while (!mRecvQueue.Empty())
+				{
+					var buf = mRecvQueue.Pop();
 
-            while (!mRecvQueue.Empty())
-            {
-                var buf = mRecvQueue.Pop();
+					mKcp.Input(buf);
+					mNeedUpdateFlag = true;
 
-                mKcp.Input(buf);
-                mNeedUpdateFlag = true;
-
-			}
+				}
+            }  
 
             for (var size = mKcp.PeekSize(); size > 0; size = mKcp.PeekSize())
             {
